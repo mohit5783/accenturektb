@@ -1,0 +1,15 @@
+<br>
+<div class="container">
+  <input type="radio" name="ro-sort" value="Name" [(ngModel)]="radioSelected"
+    (change)="onItemChange($event.target.value)">Name
+  <input type="radio" name="ro-sort" value="DOB" [(ngModel)]="radioSelected"
+    (change)="onItemChange($event.target.value)"> DOB
+
+  <ul *ngFor="let ppl of Peoples">
+    <li>
+      <span>{{ppl.name}}</span>
+      &nbsp;
+      <span>{{ppl.dob}}</span>
+    </li>
+  </ul>
+</div>
